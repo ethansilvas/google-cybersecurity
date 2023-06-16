@@ -5,4 +5,24 @@ directories
 
 displaying contents of files 
     cat - displays content of files
-    head - only displays first 10 lines of file 
+    head - only displays first 10 lines of file
+        head -n 5 updates.txt
+    tail - shows last 10 lines of file
+    less - returns content of file one page at a time
+        Space bar: Move forward one page
+
+        b: Move back one page
+
+        Down arrow: Move forward one line
+
+        Up arrow: Move back one line
+
+        q: Quit and return to the previous terminal window
+
+man hier - learn more about FHS
+
+whoami - returns username of current user
+
+
+
+
