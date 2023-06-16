@@ -23,6 +23,17 @@ man hier - learn more about FHS
 
 whoami - returns username of current user
 
+finding what you need in Linux 
+    grep - searches specified file and returns all lines containing specified string
+        grep contents bash_commands.txt
 
+        uses backslashes to escape chars 
+            "testing test" tester
+            grep "\"testing test\"" bash_commands.txt
 
+    | - piping; sends standard output of command as standard input to another command
+
+    combine grep, pipe, and ls to search multiple files 
+        ls /home/analyst/reports | grep users
+            will return all files and directories that contain "users" in their file name (does not search files)
 
