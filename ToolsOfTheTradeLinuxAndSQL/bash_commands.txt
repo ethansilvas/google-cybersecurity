@@ -61,3 +61,17 @@ finding what you need in Linux
                         - less than 3 days
                 
                 -mmin can be used for minutes instead of days
+
+Create and modify files and directories
+    mkdir - creates a new directory 
+    rmdir - removes or deletes a directory 
+
+    touch - creates a new file
+    rm - removes or deletes a file 
+
+    mv - move file/dir to new location
+    cp - copy file/dir to new location
+
+    nano to open editor
+
+
