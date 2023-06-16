@@ -70,8 +70,13 @@ Create and modify files and directories
     rm - removes or deletes a file 
 
     mv - move file/dir to new location
+        can also be used to rename files 
+            mv permissions.txt perm.txt
     cp - copy file/dir to new location
 
     nano to open editor
+        will also create a file if specified file does not exist
 
-
+    > and >> - can be used to redirect standard output 
+        > overwrites existing file 
+        >> adds to end of file
