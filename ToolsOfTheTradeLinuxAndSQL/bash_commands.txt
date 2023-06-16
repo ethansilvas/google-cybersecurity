@@ -37,3 +37,27 @@ finding what you need in Linux
         ls /home/analyst/reports | grep users
             will return all files and directories that contain "users" in their file name (does not search files)
 
+    find - searches for directories or files that meed specified criteria 
+        ex: 
+            - contain string in name    
+            - file size 
+            - last modified time
+
+        options: 
+            -name and -iname 
+                searches files and dirs for keyword 
+
+                find /home/analyst/projects -name "*log*"
+                    Note: An asterisk (*) is used as a wildcard to represent zero or more unknown characters.
+            
+            -mtime 
+                finds based on modification time
+
+                find /home/analyst/projects -mtime -3
+                    modified within the last 3 days
+
+                    can change + or - 
+                        + is more than 3 days 
+                        - less than 3 days
+                
+                -mmin can be used for minutes instead of days
