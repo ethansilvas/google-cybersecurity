@@ -1,0 +1,8 @@
+directories         
+    pwd - prints current working directory 
+    ls - prints names of files and directories in current working directory  
+    cd - navigates between directories
+
+displaying contents of files 
+    cat - displays content of files
+    head - only displays first 10 lines of file 
