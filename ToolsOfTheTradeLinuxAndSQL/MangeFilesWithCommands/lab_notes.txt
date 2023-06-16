@@ -1,0 +1,10 @@
+Note: The recommended sequence of commands for saving a file with the nano text editor is to use CTRL+O to tell nano to save the file and then use CTRL+X to exit immediately.
+In this web-based lab environment, the CTRL+O command is intercepted by your web browser and is interpreted as a request to save the web page. The sequence used here is a commonly used alternative that achieves the same end result.
+
+mkdir logs
+rmdir temp
+mv Q3patches.txt /home/analyst/reports/
+rm tempnotes.txt
+touch tasks.txt
+nano tasks.txt
+cat tasks.txt
