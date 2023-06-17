@@ -130,4 +130,10 @@ Add and delete users
         sudo chown :security access.txt
             changes group owner
 
+Man pages within the shell
+    man - displays info on other commands and how they work 
+    whatis - display description of command on a single line 
+    apropos - searches manual page descriptions for specified string
+        -a = searches for commands that contain all strings 
+
 
