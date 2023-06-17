@@ -92,3 +92,39 @@ Change permissions
     chmod u=r,g=r,o=r login_sessions.txt
         sets or assigns permissions exactly as specified 
         this command would make user, group, and other only have read permissions
+
+Add and delete users 
+    sudo - grants temporary super user permissions 
+    useradd - adds user to system
+        can only be done by root or sudo user 
+        
+        sudo useradd salesrep7
+
+        options 
+            -g = sets the users default group or primary group 
+                sudo useradd -g security fgarcia
+            -G = adds user to additional groups or supplemental/secondary groups
+                sudo useradd -G finance,admin fgarcia
+    userdel - removes user from system
+        does not delete files in user's home directory without: 
+            -r option
+    usermod - modifies existing user accounts 
+        -g and -G work 
+
+        sudo usermod -g executive fgarcia
+
+        sudo usermod -a -G marketing fgarcia
+            -a will append the user to an existing group 
+                without this, -G will replace any existing supplemental groups 
+
+            -d: Changes the user’s home directory.
+            -l: Changes the user’s login name.
+            -L: Locks the account so the user can’t log in.
+
+    chown - changes ownership of a file or directory 
+        sudo chown fgarcia access.txt
+            changes user owner 
+        sudo chown :security access.txt
+            changes group owner
+
+
