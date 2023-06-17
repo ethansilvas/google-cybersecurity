@@ -85,3 +85,6 @@ File permissions and ownership
     ls -l = displays permissions to files and directories
     ls -a = displays hidden files 
     ls -la = displays permssions to files and dirs including hidden files 
+
+Change permissions  
+    chmod g+w,o-r access.txt
