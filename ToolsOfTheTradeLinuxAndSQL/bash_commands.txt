@@ -88,3 +88,7 @@ File permissions and ownership
 
 Change permissions  
     chmod g+w,o-r access.txt
+    chmod u+rwx,g+rwx,o+rwx login_sessions.txt
+    chmod u=r,g=r,o=r login_sessions.txt
+        sets or assigns permissions exactly as specified 
+        this command would make user, group, and other only have read permissions
