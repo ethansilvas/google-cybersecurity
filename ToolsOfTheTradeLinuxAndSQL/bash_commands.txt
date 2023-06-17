@@ -80,3 +80,8 @@ Create and modify files and directories
     > and >> - can be used to redirect standard output 
         > overwrites existing file 
         >> adds to end of file
+
+File permissions and ownership 
+    ls -l = displays permissions to files and directories
+    ls -a = displays hidden files 
+    ls -la = displays permssions to files and dirs including hidden files 
