@@ -1,0 +1,7 @@
+chmod g=- test.txt  
+    works and will set to all -
+
+chmod o-w project_k.txt
+chmod g-r project_m.txt
+chmod u-w,g-w,g+r .project_x.txt
+chmod g-x drafts
