@@ -39,3 +39,28 @@ Basic filters
 
     % - substitutes for any number of chars 
     _ - subsittutes for only 1 char
+
+Common data types 
+    string 
+    numeric 
+    date and time 
+
+Operators 
+    = 
+    >
+    <
+    <> or !=
+    >=
+    <=
+
+    SELECT * 
+    FROM log_in_attempts
+    WHERE time > '18:00';
+
+    BETWEEN - operator that filters # of dates within a range 
+        SELECT * 
+        FROM machines 
+        WHERE OS_patch_date BETWEEN '2021-03-01' AND '2021-09-01';
+
+        inclusive of specified dates
+
