@@ -1,0 +1,27 @@
+Basic queries 
+    SELECT - indicates which columns to return 
+
+    FROM - which table to query
+        SELECT employee_id, device_id
+        FROM employees;
+
+    * - "all" 
+        SELECT * 
+        FROM employees;
+
+    ORDERY BY - sequences records returned based on a specified column or columns
+        SELECT customerid, city, country
+        FROM customers
+        ORDER BY city;
+
+        DESC - changes sorting order
+            SELECT customerid, city, country
+            FROM customers
+            ORDER BY city DESC;
+
+        sorting based on multiple columns
+            SELECT customerid, city, country
+            FROM customers
+            ORDER BY country, city;
+            
+                sorts by country, then for rows with the same country it sorts those by city
