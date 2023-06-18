@@ -9,7 +9,7 @@ Basic queries
         SELECT * 
         FROM employees;
 
-    ORDERY BY - sequences records returned based on a specified column or columns
+    ORDER BY - sequences records returned based on a specified column or columns
         SELECT customerid, city, country
         FROM customers
         ORDER BY city;
@@ -25,3 +25,17 @@ Basic queries
             ORDER BY country, city;
             
                 sorts by country, then for rows with the same country it sorts those by city
+
+Basic filters 
+    WHERE - indicates condition for a filter 
+        SELECT * 
+        FROM log_in_attempts
+        WHERE country = 'USA';
+
+    LIKE - used with where and % to search for pattern 
+        SELECT * 
+        FROM log_in_attempts
+        WHERE country LIKE "US%";
+
+    % - substitutes for any number of chars 
+    _ - subsittutes for only 1 char
