@@ -82,4 +82,25 @@ Filters with AND, OR, and NOT
 
         only works on a single condition
 
+Join tables 
+    INNER JOIN - returns rows matching on a specified column that exists in more than one table 
+        resulting table will include rows that contain matching values on selected column
+
+        SELECT username, office, operating_system
+        FROM employees 
+        INNER JOIN machines on employees.employee_id = machines employee_id;
+
+        Note: If a column exists in both of the tables, it is returned twice when SELECT * is used.
+
+        SELECT username, operating_system, employees.device_id
+        FROM  employees
+        INNER JOIN machines ON employees.device_id = machines.device_id;
+            Note: In the example query, username and operating_system only appear in one of the two tables, so they are written with just the column name. On the other hand, because device_id appears in both tables, it's necessary to indicate which one to return by specifying both the table and column name (employees.device_id).
+            
+
+    outer joins 
+        LEFT JOIN - returns all records of first table but only returns rows from the second table that match specified column 
+        RIGHT JOIN - opposite of LEFT JOIN 
+        FULL OUTER JOIN - returns all records from both tables  
+
 
