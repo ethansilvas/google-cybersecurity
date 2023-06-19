@@ -103,4 +103,15 @@ Join tables
         RIGHT JOIN - opposite of LEFT JOIN 
         FULL OUTER JOIN - returns all records from both tables  
 
+Aggregate functions 
+    COUNT - returns total number of rows from query 
+    AVG 
+    SUM 
 
+    place keyword after SELECT:
+        SELECT COUNT(firstname)
+        FROM customers;
+
+    SELECT COUNT(firstname)
+    FROM customers
+    WHERE country = 'USA';
