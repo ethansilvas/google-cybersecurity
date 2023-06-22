@@ -1,0 +1,10 @@
+sha256sum file1.txt
+sha256sum file2.txt
+
+sha256sum file1.txt >> file1hash
+sha256sum file2.txt >> file2hash
+
+cmp file1hash file2hash
+    Now, you can use the cmp command to compare the two files byte by byte. If a difference is found, the command reports the byte and line number where the first difference is found.
+    Note: The output of the cmp command indicates that the hashes differ at the first character in the first line.
+
