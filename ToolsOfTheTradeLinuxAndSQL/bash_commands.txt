@@ -136,4 +136,5 @@ Man pages within the shell
     apropos - searches manual page descriptions for specified string
         -a = searches for commands that contain all strings 
 
-
+Hashing a file 
+    sha256sum newfile.txt 
