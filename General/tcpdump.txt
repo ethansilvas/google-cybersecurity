@@ -1,0 +1,29 @@
+sudo tcpdump -i any -v -c 1
+    -i = interface 
+        "any available interface"
+    -v = verbose 
+    -c = count; how many packets to look at 
+
+    Note: tcpdump options that are written using short options can be written with or without a space between the option and its value. For example, sudo tcpdump -i any -c 3 and sudo tcpdump -iany -c3 are equivalent commands.
+
+Options 
+    -w = save sniffed packets to a packet capture file
+        sudo tcpdump -i any -w packetcapture.pcap
+    -r = read a packet capture file
+        sudo tcpdump -r packetcapture.pcap
+    -v = verbose 
+        3 levels of verbosity: -v, -vv, -vvv 
+    -c = count 
+    -D = list all network interfaces available on system
+    -n = disable auto name resolution for ports and IP addresses 
+        auto name resolution does reverse DNS lookup
+
+        sudo tcpdump -r packetcapture.pcap -v -n
+
+Expressions 
+    and, or, not 
+
+    sudo tcpdump -r packetcapture.pcap -n 'ipv4 and port 80
+
+    can use parenthesis to group and prioritize 
+        ipv4 and (port 80 or port 443)
