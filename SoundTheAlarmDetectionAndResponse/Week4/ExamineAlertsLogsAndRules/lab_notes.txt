@@ -1,0 +1,38 @@
+cat custom.rules
+
+common actions 
+    alert, drop, pass, and reject
+        drop also generates an alert but drops the traffic
+            only works in IPS mode
+        pass allows traffic to pass through the network interface
+            can be used to override other rules 
+            
+            alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"GET on wire"; flow:established,to_server; content:"GET"; http_method; sid:12345; rev:3;)
+            pass http 172.17.0.77 any -> $EXTERNAL_NET any (msg:"BAD USER-AGENT";flow:established,to_server;content:!”Mozilla/5.0”; http_user_agent; sid: 12365; rev:1;)
+                same rule but will allow the specified IP to allow http traffic from there
+        reject does not allow traffic to pass 
+            TCP reset packet will be sent 
+                will drop matching packet 
+
+                TCP reset tells computers to stop sending messages to each other 
+
+$HOME_NET is a Suricata variable defined in /etc/suricata/suricata.yaml
+
+The flow:established,to_server option determines that packets from the client to the server should be matched. (In this instance, a server is defined as the device responding to the initial SYN packet with a SYN-ACK packet.)
+
+sudo suricata -r sample.pcap -S custom.rules -k none
+    This command starts the Suricata application and processes the sample.pcap file using the rules in the custom.rules file. It returns an output stating how many packets were processed by Suricata.
+
+    The -r sample.pcap option specifies an input file to mimic network traffic. In this case, the sample.pcap file.
+    The -S custom.rules option instructs Suricata to use the rules defined in the custom.rules file.
+    The -k none option instructs Suricata to disable all checksum checks.
+
+jq . /var/log/suricata/eve.json | less
+    displays entries in log files in a readable format
+
+jq -c "[.timestamp,.flow_id,.alert.signature,.proto,.dest_ip]" /var/log/suricata/eve.json
+    Note: The jq command above extracts the fields specified in the list in the square brackets from the JSON payload. The fields selected are the timestamp (.timestamp), the flow id (.flow_id), the alert signature or msg (.alert.signature), the protocol (.proto), and the destination IP address (.dest_ip).
+
+jq "select(.flow_id==1257833052666005)" /var/log/suricata/eve.json
+
+
