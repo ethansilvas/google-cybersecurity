@@ -18,7 +18,7 @@ It also taught me technical skills with:
   * Linux
   * Python
   * SQL
-  * SIEM tools (Splunk and Wireshark)
+  * SIEM tools (Splunk and Chronicle)
   * Network protocol analyzers (Wireshark and tcpdump)
   * IDS/IPS tools
   * Firewalls
